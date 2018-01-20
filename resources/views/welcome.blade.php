@@ -8,7 +8,8 @@
                 <div class="panel-heading">Welcome</div>
 
                 <div class="panel-body">
-                    Your Application's Landing Page.
+		    <div id="gmap-dropdown" style="with:300px;height:400px;"></div>
+		    <div id="gmap-list"></div>
                 </div>
             </div>
         </div>
