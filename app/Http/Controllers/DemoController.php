@@ -31,7 +31,12 @@ class DemoController extends Controller
 			}
 
 			Session::put('date_parts', $dateParts);
+			
+			$location = array($lat, $lng);
+			Session::put('location', $location);
+			
 			return redirect()->route('dayPart');
+			
 		}
 
 

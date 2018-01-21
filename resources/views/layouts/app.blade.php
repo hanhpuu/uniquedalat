@@ -19,6 +19,7 @@ License: You must have a valid license purchased only from themeforest (the abov
 <!-- Head BEGIN -->
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
   <title>Login | Metronic Frontend</title>
 
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -36,7 +37,7 @@ License: You must have a valid license purchased only from themeforest (the abov
   <meta property="og:url" content="-CUSTOMER VALUE-">
 
   <link rel="shortcut icon" href="favicon.ico">
-
+  
   <!-- Fonts START -->
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|PT+Sans+Narrow|Source+Sans+Pro:200,300,400,600,700,900&amp;subset=all" rel="stylesheet" type="text/css">
   <!-- Fonts END -->
@@ -59,7 +60,8 @@ License: You must have a valid license purchased only from themeforest (the abov
   <link href="/theme/assets/frontend/layout/css/custom.css" rel="stylesheet">
   <!-- Theme styles END -->
   <link rel="stylesheet" type="text/css" href="/theme/assets/global/plugins/bootstrap-datepicker/css/datepicker3.css"/>
-
+  @section('css')
+  @show
 </head>
 <!-- Head END -->
 
