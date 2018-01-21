@@ -28,9 +28,13 @@ class DemoController extends Controller
 				$dateParts[$start->format('d-m-Y')] = [CommonConst::MORNING, CommonConst::AFTERNOON, CommonConst::EVENING];
 				$start->addDay();
 			}
+
+			Session::put('date_parts', $dateParts);
+			return redirect()->route('dayPart');
 		}
-		Session::put('date_parts', $dateParts);
-		return redirect()->route('dayPart');
+
+
+		return view('front.demo.index');
 	}
 
 	public function dayPart(Request $request)

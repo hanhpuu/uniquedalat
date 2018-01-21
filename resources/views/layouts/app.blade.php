@@ -420,8 +420,9 @@ License: You must have a valid license purchased only from themeforest (the abov
     </script>
 	
     <!-- END PAGE LEVEL JAVASCRIPTS -->
-	<script type="text/javascript" src="/js/demo/demo.js"></script>
-
+	
+	@section('js')
+	@show
 </body>
 <!-- END BODY -->
 </html>
