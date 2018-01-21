@@ -14,37 +14,57 @@ use App\Http\Constant\Common as CommonConst;
 <div class="row margin-bottom-40">
     <!-- BEGIN SIDEBAR -->
     <div class="sidebar col-md-3 col-sm-3">
-	<div class="margin-bottom-10"><button type="button" class="btn green">Green</button></div>
-	<div class="margin-bottom-10"><button type="button" class="btn green">Green</button></div>
-	<div class="margin-bottom-10"><button type="button" class="btn green">Green</button></div>
+		<div class="margin-bottom-10"><button type="button" class="btn green">Green</button></div>
+		<div class="margin-bottom-10"><button type="button" class="btn green">Green</button></div>
+		<div class="margin-bottom-10"><button type="button" class="btn green">Green</button></div>
     </div>
     <!-- END SIDEBAR -->
 
     <!-- BEGIN CONTENT -->
     <div class="col-md-9 col-sm-9">
-	<div class="content-form-page">
-	    <div class="row">
-                <div class="col-md-12 col-sm-12 pull-left">
-		    <form class="form-horizontal form-without-legend" role="form" method="post">
-			<div class="checkbox-list">
-			@foreach ($dateParts as $date => $datePart)
-			<label><input type="checkbox" name="{{$date. ' '. CommonConst::MORNING}}" value="{{$date. ' '. CommonConst::MORNING}}"> Buổi sáng ngày {{ $date }} </label>
-			<label><input type="checkbox" name="{{$date. ' '. CommonConst::AFTERNOON}}" value="{{$date. ' '. CommonConst::AFTERNOON}}"> Buổi trưa ngày {{ $date }}</label>
-			<label><input type="checkbox" name="{{$date. ' '. CommonConst::EVENING}}" value="{{$date. ' '. CommonConst::EVENING}}"> Buổi tối ngày {{ $date }} </label>
-			@endforeach
-			</div>
+		<div class="content-form-page">
 			<div class="row">
-			    <div class="col-lg-10 col-md-offset-2 padding-left-0 padding-top-20">
-				<button type="submit" name="submit" class="btn btn-primary">Xem lịch trình</button>
-			    </div>
+				<div class="portlet box red">
+					<div class="portlet-title">
+						<div class="caption">
+							<i class="fa fa-gift"></i>Lịch trình 
+						</div>
+						<ul class="nav nav-tabs">
+						@foreach($agendas as $agendaName => $agenda)
+							<?php
+								$i = array_search($agendaName,array_keys($agendas));
+							?>
+							@if(!$i)
+							<li class="active">
+							@else
+							<li>
+							@endif						
+								<a href="#portlet_tab_{{$i}}" data-toggle="tab" aria-expanded="true">{{$agendaName}}</a>
+							</li>
+							
+						@endforeach
+						</ul>
+							
+						
+					</div>
+					<div class="portlet-body">
+						<div class="tab-content">
+							@foreach($agendas as $agendaName => $agenda)
+								<?php
+									$i = array_search($agendaName,array_keys($agendas));
+								?>
+								<div class="tab-pane" id="portlet_tab_{{$i}}">
+									<p> Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+										praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+										dolore magna aliquam erat volutpat.ut laoreet dolore magna ut laoreet dolore magna. ut laoreet dolore magna. ut laoreet dolore magna. </p>
+								</div>
+							@endforeach
+						</div>
+					</div>
+				</div>
+                
 			</div>
-			<input type="hidden" name="_token" value="{{csrf_token()}}">
-			
-		    </form>
 		</div>
-
-	    </div>
-	</div>
     </div>
     <!-- END CONTENT -->
 </div>

@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use Session;
 use Carbon\Carbon;
 use App\Http\Constant\Common as CommonConst;
+use App\Http\Models\Agenda;
 
 class DemoController extends Controller
 {
@@ -64,8 +65,15 @@ class DemoController extends Controller
 
 	public function chooseRoute(Request $request)
 	{
-		$dateParts = Session::put('date_parts_join', $dateParts);
-		return view('front.demo.chooseRoute', ['dateParts' => $dateParts]);
+		$dateParts = Session::get('date_parts_join');
+		if($request->isMethod('POST')) {
+			
+			Session::put('date_parts_join', $dateParts);
+			$datePart = array_shift($dateParts);
+		}
+		$agendas = Agenda::getAllAgendas();
+
+		return view('front.demo.chooseRoute', ['agendas' => $agendas]);
 	}
 
 }
