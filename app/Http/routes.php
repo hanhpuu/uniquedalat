@@ -25,11 +25,14 @@
 Route::group(['middleware' => ['web']], function () {
 
     Route::get('/', 'DemoController@index');
-
-    Route::get('/tasks', 'TaskController@index');
-    Route::post('/task', 'TaskController@store');
-    Route::delete('/task/{task}', 'TaskController@destroy');
-
-    Route::auth();
-
+    Route::post('/', 'DemoController@index');
+   
+    Route::match(['get', 'post'], 'them-ngay', [
+	'as' => 'dayPart', 'uses' => 'DemoController@dayPart'
+    ]);
+    
+    Route::match(['get', 'post'], 'chon-lich-trinh', [
+	'as' => 'date_parts_join', 'uses' => 'DemoController@chooseRoute'
+    ]);
+    
 });

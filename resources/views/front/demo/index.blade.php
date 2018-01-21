@@ -21,17 +21,17 @@
 		<div class="content-form-page">
 			<div class="row">
                 <div class="col-md-12 col-sm-12 pull-left">
-					<form class="form-horizontal form-without-legend" role="form">
+			<form class="form-horizontal form-without-legend" role="form" method="post" action="/">
 						<div class="form-group">
 							<label for="email" class="col-lg-2 control-label">Ngày đến<span class="require">*</span></label>
 							<div class="col-lg-10">
-								<input type="text" class="form-control form-control-inline input-small date-picker" name="date_from" data-date-format="dd-mm-yyyy" data-date-viewmode="years" />
+								<input type="text" class="form-control form-control-inline input-small date-picker" name="start_date" data-date-format="dd-mm-yyyy" data-date-viewmode="years" />
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="password" class="col-lg-2 control-label">Ngày đi <span class="require">*</span></label>
 							<div class="col-lg-10">
-								<input type="text" class="form-control form-control-inline input-small date-picker" name="date_from" data-date-format="dd-mm-yyyy" data-date-viewmode="years" />
+								<input type="text" class="form-control form-control-inline input-small date-picker" name="end_date" data-date-format="dd-mm-yyyy" data-date-viewmode="years" />
 							</div>
 						</div>
 						
@@ -40,7 +40,8 @@
 								<button type="submit" class="btn btn-primary">Xem lịch trình</button>
 							</div>
 						</div>
-						
+						<input type="hidden" name="_token" value="{{csrf_token()}}">
+					
 					</form>
                 </div>
                
