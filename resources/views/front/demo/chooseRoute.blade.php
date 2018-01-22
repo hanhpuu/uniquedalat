@@ -78,7 +78,8 @@ use App\Http\Constant\Common as CommonConst;
     <script>
     var locations = '';
     var myJSON = JSON.parse('{!! $agenda_json !!}');
-    
+    var lat = {{$location['lat']}};
+    var lng = {{$location['lng']}};
     </script>
     <script type="text/javascript" src="/js/demo/chooseRoute.js"></script>
 

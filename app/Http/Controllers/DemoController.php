@@ -34,7 +34,7 @@ class DemoController extends Controller
 			
 			$lat = $request->input('lat');
 			$lng = $request->input('lng');
-			$location = array($lat, $lng);
+			$location = array('lat' => $lat, 'lng' => $lng);
 			Session::put('location', $location);
 			
 			return redirect()->route('dayPart');
@@ -74,7 +74,8 @@ class DemoController extends Controller
 			$datePart = array_shift($dateParts);
 		}
 		$agendas = Agenda::getAllAgendas();
-		return view('front.demo.chooseRoute', ['agendas' => $agendas, 'agenda_json' => json_encode($agendas)]);
+		$location = $request->session()->get('location');
+		return view('front.demo.chooseRoute', ['agendas' => $agendas, 'agenda_json' => json_encode($agendas), 'location' => $location]);
 		
 	}
 
