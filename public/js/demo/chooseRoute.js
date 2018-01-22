@@ -1,21 +1,20 @@
+var map = [];
 function initializeMap() {
-    for (const prop in myJSON) {
-        var data = myJSON[prop];
-        var name = 'map['+ prop +']';
-        initialize(name, data);
+    
+    for (const index in myJSON) {
+        var data = myJSON[index].data;
+        var elementId = 'map_' + index;
+        
+        map[elementId] = initialize(elementId, data);
     }
 }
 
-var geocoder;
-var map;
-var directionsDisplay;
-var directionsService = new google.maps.DirectionsService();
 
+function initialize(id, data) {
+  var directionsService = new google.maps.DirectionsService();
 
-function initialize(name, data) {
-  directionsDisplay = new google.maps.DirectionsRenderer();
-  
-  var mapDiv = document.getElementById(map[agendaName]);
+  var directionsDisplay = new google.maps.DirectionsRenderer();
+  var mapDiv = document.getElementById(id);
   var map = new google.maps.Map(mapDiv, {
     zoom: 10,
     center: new google.maps.LatLng(11.824717, 108.334160),
@@ -56,6 +55,7 @@ function initialize(name, data) {
       directionsDisplay.setDirections(result);
     }
   });
+  return map;
 }
 google.maps.event.addDomListener(window, "load", initializeMap);
 
@@ -63,7 +63,17 @@ $( document ).ready(function() {
     $('.agenda').change(function(){
         $('input:checkbox').not(this).prop('checked', false);    
         $.uniform.update();
-    });    
+    });
+    
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+      var index = $(this).attr('data-index');
+      var elementId = 'map_' + index;
+      var gMap = map[elementId]
+      google.maps.event.trigger(gMap, 'resize');
+      gMap.setZoom(13);      // This will trigger a zoom_changed on the map
+      gMap.setCenter(new google.maps.LatLng(11.824717, 108.334160));
+      gMap.setMapTypeId(google.maps.MapTypeId.ROADMAP);
+    });
 });
 
 

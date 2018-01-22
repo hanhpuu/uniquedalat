@@ -31,16 +31,15 @@ use App\Http\Constant\Common as CommonConst;
 			    <i class="fa fa-gift"></i>Lịch trình 
 			</div>
 			<ul class="nav nav-tabs">
-			    @foreach($agendas as $agendaName => $agenda)
-			    <?php
-			    $i = array_search($agendaName, array_keys($agendas));
-			    ?>
+			    @foreach($agendas as $i => $agenda)	    
 			    @if(!$i)
 			    <li class="active">
 				@else
 			    <li>
 				@endif						
-				<a href="#portlet_tab_{{$i}}" data-toggle="tab" aria-expanded="true">{{$agendaName}}</a>
+				<a href="#portlet_tab_{{$i}}" data-toggle="tab" aria-expanded="true" class="tab-map" data-index="{{$i}}">
+					{{$agenda['name']}}
+				</a>
 			    </li>
 
 			    @endforeach
@@ -50,18 +49,15 @@ use App\Http\Constant\Common as CommonConst;
 		    </div>
 		    <div class="portlet-body">
 			<div class="tab-content">
-			    @foreach($agendas as $agendaName => $agenda)
-			    <?php
-			    $i = array_search($agendaName, array_keys($agendas));
-			    ?>
+			    @foreach($agendas as $i => $agenda)    
 			    @if(!$i)
 			    <div class="tab-pane active" id="portlet_tab_{{$i}}">
 			    @else
 				<div class="tab-pane" id="portlet_tab_{{$i}}">
 			    @endif
-				    <div> <input type='checkbox' name='Agenda[{{$agendaName}}]' class='agenda'> </div>
+				    <div> <input type='checkbox' name='Agenda[{{$agenda['name']}}]' class='agenda'> </div>
 
-				    <div id="map[{{$agendaName}}]" class="map"></div>	
+				    <div id="map_{{$i}}" class="map"></div>	
 				</div>
 			    @endforeach
 			    </div>
