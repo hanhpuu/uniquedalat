@@ -20,7 +20,7 @@ License: You must have a valid license purchased only from themeforest (the abov
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-  <title>Login | Metronic Frontend</title>
+  <title>Đăng nhập</title>
 
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -100,8 +100,8 @@ License: You must have a valid license purchased only from themeforest (the abov
                 <!-- BEGIN TOP BAR MENU -->
                 <div class="col-md-6 col-sm-6 additional-nav">
                     <ul class="list-unstyled list-inline pull-right">
-                        <li><a href="page-login.html">Log In</a></li>
-                        <li><a href="page-reg-page.html">Registration</a></li>
+                        <li><a href="page-login.html">Đăng nhập</a></li>
+                        <li><a href="page-reg-page.html">Đăng ký</a></li>
                     </ul>
                 </div>
                 <!-- END TOP BAR MENU -->
@@ -121,151 +121,36 @@ License: You must have a valid license purchased only from themeforest (the abov
           <ul>
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#">
-                Home 
-                
+                Trang Chủ 
               </a>
-                
-              <ul class="dropdown-menu">
-                <li><a href="index.html">Home Default</a></li>
-                <li><a href="index-header-fix.html">Home with Header Fixed</a></li>
-                <li><a href="index-without-topbar.html">Home without Top Bar</a></li>
-              </ul>
             </li>
-            <li class="dropdown dropdown-megamenu">
-              <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#">
-                Mega Menu
-                
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <div class="header-navigation-content">
-                    <div class="row">
-                      <div class="col-md-4 header-navigation-col">
-                        <h4>Footwear</h4>
-                        <ul>
-                          <li><a href="index.html">Astro Trainers</a></li>
-                          <li><a href="index.html">Basketball Shoes</a></li>
-                          <li><a href="index.html">Boots</a></li>
-                          <li><a href="index.html">Canvas Shoes</a></li>
-                          <li><a href="index.html">Football Boots</a></li>
-                          <li><a href="index.html">Golf Shoes</a></li>
-                          <li><a href="index.html">Hi Tops</a></li>
-                          <li><a href="index.html">Indoor Trainers</a></li>
-                        </ul>
-                      </div>
-                      <div class="col-md-4 header-navigation-col">
-                        <h4>Clothing</h4>
-                        <ul>
-                          <li><a href="index.html">Base Layer</a></li>
-                          <li><a href="index.html">Character</a></li>
-                          <li><a href="index.html">Chinos</a></li>
-                          <li><a href="index.html">Combats</a></li>
-                          <li><a href="index.html">Cricket Clothing</a></li>
-                          <li><a href="index.html">Fleeces</a></li>
-                          <li><a href="index.html">Gilets</a></li>
-                          <li><a href="index.html">Golf Tops</a></li>
-                        </ul>
-                      </div>
-                      <div class="col-md-4 header-navigation-col">
-                        <h4>Accessories</h4>
-                        <ul>
-                          <li><a href="index.html">Belts</a></li>
-                          <li><a href="index.html">Caps</a></li>
-                          <li><a href="index.html">Gloves</a></li>
-                        </ul>
-
-                        <h4>Clearance</h4>
-                        <ul>
-                          <li><a href="index.html">Jackets</a></li>
-                          <li><a href="index.html">Bottoms</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </li>
-            <li class="dropdown active">
-              <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#">
-                Pages 
-                
-              </a>
-                
-              <ul class="dropdown-menu">
-                <li><a href="page-about.html">About Us</a></li>
-                <li><a href="page-services.html">Services</a></li>
-                <li><a href="page-prices.html">Prices</a></li>
-                <li><a href="page-faq.html">FAQ</a></li>
-                <li><a href="page-gallery.html">Gallery</a></li>
-                <li><a href="page-search-result.html">Search Result</a></li>
-                <li><a href="page-404.html">404</a></li>
-                <li><a href="page-500.html">500</a></li>
-                <li class="active"><a href="page-login.html">Login Page</a></li>
-                <li><a href="page-forgotton-password.html">Forget Password</a></li>
-                <li><a href="page-reg-page.html">Signup Page</a></li>
-                <li><a href="page-careers.html">Careers</a></li>
-                <li><a href="page-site-map.html">Site Map</a></li>
-                <li><a href="page-contacts.html">Contact</a></li>                
-              </ul>
-            </li>
+            
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#">
-                Features 
-                
-              </a>
-                
+            Thông tin giới thiệu     
+              </a>  
               <ul class="dropdown-menu">
-                <li><a href="feature-typography.html">Typography</a></li>
-                <li><a href="feature-buttons.html">Buttons</a></li>
-                <li><a href="feature-forms.html">Forms</a></li>
-                
-                <li class="dropdown-submenu">
-                  <a href="index.html">Multi level <i class="fa fa-angle-right"></i></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="index.html">Second Level Link</a></li>
-                    <li><a href="index.html">Second Level Link</a></li>
-                    <li class="dropdown-submenu">
-                      <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#">
-                        Second Level Link 
-                        <i class="fa fa-angle-right"></i>
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a href="index.html">Third Level Link</a></li>
-                        <li><a href="index.html">Third Level Link</a></li>
-                        <li><a href="index.html">Third Level Link</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
+                <li><a href="page-about.html">Lịch sử thành phố</a></li>
+                <li><a href="page-services.html">Địa lý</a></li>
+                <li><a href="page-prices.html">Các sự kiện nổi bật</a></li> 
+		<li><a href="page-prices.html">Các địa điểm tham quan</a></li> 
               </ul>
             </li>
-            <li class="dropdown">
+            <li><a href="shop-index.html" target="_blank">Địa điểm lưu trú</a></li>
+	    <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#">
-                Portfolio 
-                
-              </a>
-                
+            Ẩm thực phố phường     
+              </a>  
               <ul class="dropdown-menu">
-                <li><a href="portfolio-4.html">Portfolio 4</a></li>
-                <li><a href="portfolio-3.html">Portfolio 3</a></li>
-                <li><a href="portfolio-2.html">Portfolio 2</a></li>
-                <li><a href="portfolio-item.html">Portfolio Item</a></li>
+                <li><a href="page-about.html">Nhà hàng/ Quán ăn</a></li>
+                <li><a href="page-services.html"> Cà phê </a></li>
               </ul>
             </li>
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#">
-                Blog 
-                
-              </a>
-                
-              <ul class="dropdown-menu">
-                <li><a href="blog.html">Blog Page</a></li>
-                <li><a href="blog-item.html">Blog Item</a></li>
-              </ul>
-            </li>
-            <li><a href="shop-index.html" target="_blank">E-Commerce</a></li>
-            <li><a href="onepage-index.html" target="_blank">One Page</a></li>
-            <li><a href="http://keenthemes.com/preview/metronic/theme/templates/admin" target="_blank">Admin theme</a></li>
+            <li><a href="onepage-index.html" target="_blank"></a></li>
+	    <li><a href="onepage-index.html" target="_blank">Blog du lịch</a></li>
+	    <li><a href="onepage-index.html" target="_blank">Lịch trình cho bạn</a></li>
+	    
+            <li><a href="http://keenthemes.com/preview/metronic/theme/templates/admin" target="_blank">Liên hệ</a></li>
 
             <!-- BEGIN TOP SEARCH -->
             <li class="menu-search">
@@ -302,65 +187,28 @@ License: You must have a valid license purchased only from themeforest (the abov
         <div class="row">
           <!-- BEGIN BOTTOM ABOUT BLOCK -->
           <div class="col-md-4 col-sm-6 pre-footer-col">
-            <h2>About us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam sit nonummy nibh euismod tincidunt ut laoreet dolore magna aliquarm erat sit volutpat.</p>
+            <h2>Về chúng tôi</h2>
+            <p>Website chính thức của dự án Unique Đà Lạt.</p>
 
-            <div class="photo-stream">
-              <h2>Photos Stream</h2>
-              <ul class="list-unstyled">
-                <li><a href="#"><img alt="" src="/theme/assets/frontend/pages/img/people/img5-small.jpg"></a></li>
-                <li><a href="#"><img alt="" src="/theme/assets/frontend/pages/img/works/img1.jpg"></a></li>
-                <li><a href="#"><img alt="" src="/theme/assets/frontend/pages/img/people/img4-large.jpg"></a></li>
-                <li><a href="#"><img alt="" src="/theme/assets/frontend/pages/img/works/img6.jpg"></a></li>
-                <li><a href="#"><img alt="" src="/theme/assets/frontend/pages/img/works/img3.jpg"></a></li>
-                <li><a href="#"><img alt="" src="/theme/assets/frontend/pages/img/people/img2-large.jpg"></a></li>
-                <li><a href="#"><img alt="" src="/theme/assets/frontend/pages/img/works/img2.jpg"></a></li>
-                <li><a href="#"><img alt="" src="/theme/assets/frontend/pages/img/works/img5.jpg"></a></li>
-                <li><a href="#"><img alt="" src="/theme/assets/frontend/pages/img/people/img5-small.jpg"></a></li>
-                <li><a href="#"><img alt="" src="/theme/assets/frontend/pages/img/works/img1.jpg"></a></li>
-                <li><a href="#"><img alt="" src="/theme/assets/frontend/pages/img/people/img4-large.jpg"></a></li>
-                <li><a href="#"><img alt="" src="/theme/assets/frontend/pages/img/works/img6.jpg"></a></li>
-                <li><a href="#"><img alt="" src="/theme/assets/frontend/pages/img/works/img3.jpg"></a></li>
-                <li><a href="#"><img alt="" src="/theme/assets/frontend/pages/img/people/img2-large.jpg"></a></li>
-                <li><a href="#"><img alt="" src="/theme/assets/frontend/pages/img/works/img2.jpg"></a></li>
-              </ul>                    
-            </div>
+            
           </div>
           <!-- END BOTTOM ABOUT BLOCK -->
 
           <!-- BEGIN BOTTOM CONTACTS -->
-          <div class="col-md-4 col-sm-6 pre-footer-col">
-            <h2>Our Contacts</h2>
+          <div style='float: right ' class="col-md-4 col-sm-6 pre-footer-col">
+            <h2>Liên hệ</h2>
             <address class="margin-bottom-40">
-              35, Lorem Lis Street, Park Ave<br>
-              California, US<br>
+              Địa chỉ: 61 Đào Duy Từ, thành phố Đà Lạt<br>
               Phone: 300 323 3456<br>
-              Fax: 300 323 1456<br>
-              Email: <a href="mailto:info@metronic.com">info@metronic.com</a><br>
-              Skype: <a href="skype:metronic">metronic</a>
+              Email: <a href="mailto:hoang_phi_carol2000@yahoo.com">hoang_phi_carol2000@yahoo.com</a><br>
+  
             </address>
 
-            <div class="pre-footer-subscribe-box pre-footer-subscribe-box-vertical">
-              <h2>Newsletter</h2>
-              <p>Subscribe to our newsletter and stay up to date with the latest news and deals!</p>
-              <form action="#">
-                <div class="input-group">
-                  <input type="text" placeholder="youremail@mail.com" class="form-control">
-                  <span class="input-group-btn">
-                    <button class="btn btn-primary" type="submit">Subscribe</button>
-                  </span>
-                </div>
-              </form>
-            </div>
+            
           </div>
           <!-- END BOTTOM CONTACTS -->
 
-          <!-- BEGIN TWITTER BLOCK --> 
-          <div class="col-md-4 col-sm-6 pre-footer-col">
-            <h2 class="margin-bottom-0">Latest Tweets</h2>
-            <a class="twitter-timeline" href="https://twitter.com/twitterapi" data-tweet-limit="2" data-theme="dark" data-link-color="#57C8EB" data-widget-id="455411516829736961" data-chrome="noheader nofooter noscrollbar noborders transparent">Loading tweets by @keenthemes...</a>
-          </div>
-          <!-- END TWITTER BLOCK -->
+          
         </div>
       </div>
     </div>
@@ -372,7 +220,7 @@ License: You must have a valid license purchased only from themeforest (the abov
         <div class="row">
           <!-- BEGIN COPYRIGHT -->
           <div class="col-md-6 col-sm-6 padding-top-10">
-            2014 © Metronic Shop UI. ALL Rights Reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+            2018 © Dự án Unique Đà Lạt. 
           </div>
           <!-- END COPYRIGHT -->
           <!-- BEGIN PAYMENTS -->

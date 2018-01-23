@@ -78,5 +78,16 @@ class DemoController extends Controller
 		return view('front.demo.chooseRoute', ['agendas' => $agendas, 'agenda_json' => json_encode($agendas), 'location' => $location]);
 		
 	}
+	
+	public function finalData(Request $request)
+	{
+	    
+	    $lat = $request->input('lat');
+			$lng = $request->input('lng');
+			$location = array('lat' => $lat, 'lng' => $lng);
+			Session::put('location', $location);
+			
+			return redirect()->route('dayPart');
+	}
 
 }

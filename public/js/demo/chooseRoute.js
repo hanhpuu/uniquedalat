@@ -69,10 +69,10 @@ function initialize(id, data) {
 google.maps.event.addDomListener(window, "load", initializeMap);
 
 $(document).ready(function () {
-    $('.agenda').change(function () {
-        $('input:checkbox').not(this).prop('checked', false);
-        $.uniform.update();
-    });
+//    $('.agenda').change(function () {
+//        $('input:checkbox').not(this).prop('checked', false);
+//        $.uniform.update();
+//    });
 
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         var index = $(this).attr('data-index');

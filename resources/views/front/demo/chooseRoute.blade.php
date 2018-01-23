@@ -1,4 +1,5 @@
 <?php
+
 //
 
 use App\Http\Constant\Common as CommonConst;
@@ -30,15 +31,15 @@ use App\Http\Constant\Common as CommonConst;
 			<div class="caption">
 			    <i class="fa fa-gift"></i>Lịch trình 
 			</div>
-			<ul class="nav nav-tabs">
+			<ul class="nav nav-tabs ul-map">
 			    @foreach($agendas as $i => $agenda)	    
 			    @if(!$i)
 			    <li class="active">
 				@else
 			    <li>
 				@endif						
-				<a href="#portlet_tab_{{$i}}" data-toggle="tab" aria-expanded="true" class="tab-map" data-index="{{$i}}">
-					{{$agenda['name']}}
+				<a href="#portlet_tab_{{$i}}" data-toggle="tab" aria-expanded="true" data-index="{{$i}}">
+				    {{$agenda['name']}}
 				</a>
 			    </li>
 
@@ -52,14 +53,21 @@ use App\Http\Constant\Common as CommonConst;
 			    @foreach($agendas as $i => $agenda)    
 			    @if(!$i)
 			    <div class="tab-pane active" id="portlet_tab_{{$i}}">
-			    @else
+				@else
 				<div class="tab-pane" id="portlet_tab_{{$i}}">
-			    @endif
-				    <div> <input type='checkbox' name='Agenda[{{$agenda['name']}}]' class='agenda'> </div>
+				    @endif
+					    <!--<div> <input type='checkbox' name='Agenda[{{$agenda['name']}}]' class='agenda'> </div>-->
 
 				    <div id="map_{{$i}}" class="map"></div>	
 				</div>
-			    @endforeach
+				@endforeach
+			    </div>
+			    <div class="col-lg-10 col-md-offset-2 padding-left-0 padding-top-20">
+
+				<form>
+				    <input type="submit" value="Xem lịch trình" class="btn btn-primary">
+				</form>
+				<input type='hidden' name='finalData' id='finalData'>
 			    </div>
 			</div>
 		    </div>
@@ -76,10 +84,19 @@ use App\Http\Constant\Common as CommonConst;
     <!--<script src="https://maps.googleapis.com/maps/api/js"></script>-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEqDMXEY3pAjm_G5utfzA2ukLvJk-1I7Q"></script>
     <script>
-    var locations = '';
-    var myJSON = JSON.parse('{!! $agenda_json !!}');
-    var lat = {{$location['lat']}};
-    var lng = {{$location['lng']}};
+var locations = '';
+var myJSON = JSON.parse('{!! $agenda_json !!}');
+var lat = {{$location['lat']}};
+var lng = {{$location['lng']}};
+$(document).ready(function(){
+$("form").submit(function(){
+var index = $('.ul-map').find('.active').find('a').attr('data-index');
+var data = myJSON[index]['data'];
+JSON.stringify(data);
+document.getElementById("finalData").value = data;
+console.log(data);
+});
+});
     </script>
     <script type="text/javascript" src="/js/demo/chooseRoute.js"></script>
 
