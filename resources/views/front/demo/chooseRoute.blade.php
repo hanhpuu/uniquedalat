@@ -64,10 +64,11 @@ use App\Http\Constant\Common as CommonConst;
 			    </div>
 			    <div class="col-lg-10 col-md-offset-2 padding-left-0 padding-top-20">
 
-				<form>
-				    <input type="submit" value="Xem lịch trình" class="btn btn-primary">
+				<form method="POST">
+				    <input type='hidden' name='_token' value="{{csrf_token()}}">
+				    <input type='hidden' name='finalData' id='finalData'>
+				    <button type="submit" value="Xem lịch trình" class="btn btn-primary">Xem lịch trình</button>
 				</form>
-				<input type='hidden' name='finalData' id='finalData'>
 			    </div>
 			</div>
 		    </div>
@@ -84,22 +85,21 @@ use App\Http\Constant\Common as CommonConst;
     <!--<script src="https://maps.googleapis.com/maps/api/js"></script>-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEqDMXEY3pAjm_G5utfzA2ukLvJk-1I7Q"></script>
     <script>
-var locations = '';
-var myJSON = JSON.parse('{!! $agenda_json !!}');
-var lat = {{$location['lat']}};
-var lng = {{$location['lng']}};
-$(document).ready(function(){
-$("form").submit(function(){
-var index = $('.ul-map').find('.active').find('a').attr('data-index');
-var data = myJSON[index]['data'];
-JSON.stringify(data);
-document.getElementById("finalData").value = data;
-console.log(data);
-});
-});
+	var locations = '';
+	var myJSON = JSON.parse('{!! $agenda_json !!}');
+	var lat = {{$location['lat']}};
+	var lng = {{$location['lng']}};
+	$(document).ready(function(){
+	    $("form").submit(function(){
+		var index = $('.ul-map').find('.active').find('a').attr('data-index');
+		var data = myJSON[index]['data'];
+		var stringData = JSON.stringify(data);
+		document.getElementById("finalData").value = stringData;
+	    });
+	});
     </script>
-    <script type="text/javascript" src="/js/demo/chooseRoute.js"></script>
-
+    <script type="text/javascript" src="/js/demo/gmap.js"></script>
+	<script type="text/javascript" src="/js/demo/chooseRoute.js"></script>
     @endsection
 
     @section('css')

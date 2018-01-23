@@ -69,7 +69,10 @@ class DemoController extends Controller
 	{
 		$dateParts = Session::get('date_parts_join');
 		if($request->isMethod('POST')) {
-			
+		    echo '<pre>';
+		    print_r($request->input('finalData'));
+		    echo '</pre>';
+		    die;
 			Session::put('date_parts_join', $dateParts);
 			$datePart = array_shift($dateParts);
 		}

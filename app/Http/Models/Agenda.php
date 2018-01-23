@@ -4,99 +4,71 @@ namespace App\Http\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Agenda extends Model {
+class Agenda extends Model
+{
 
-    public static function getAllAgendas()
-    {
-	return [
-	    [
-		'name' => 'Dâu chân đầu tiên',
-		'data' => [
-		    [
-			'Xã Lát',
-			12.113155,
-			108.411023,
-			1
-		    ],
-		    [
-			'Langbiang',
-			12.095916,
-			108.413252,
-			2
-		    ],
-		    [
-			'Ma rừng lữ quán',
-			12.011218,
-			108.347851,
-			1
-		    ],
-		    [
-			'Làng cù lần',
-			12.028467,
-			108.367633,
-			2
-		    ]
-		]
-	    ],
-	    [
-		'name' => 'Ngoại ô Đà Lạt',
-		'data' => [
-		    [
-			'Thác Voi',
-			11.823414,
-			108.335087,
-			2,
-		    ],
-		    [
-			'Chùa Linh Ấn Tự',
-			11.824717,
-			108.334160,
-			1.5,
-		    ],
-		    [
-			'Trại nuôi dế',
-			11.882753,
-			108.335689,
-			0.5,
-		    ],
-		    [
-			'Dệt lụa tơ tằm',
-			11.824341,
-			108.339325,
-			1
-		    ],
-		]
-	    ],
-	    [
-		'name' => 'Đà Lạt thân quen',
-		'data' => [
-		    [
-			'Rừng hoa Đà Lạt',
-			11.981861,
-			108.453775,
-			1
-		    ],
-		    [
-			'Thung lũng tình yêu',
-			11.978093,
-			108.450331,
-			1
-		    ],
-		    [
-			'XQ Sử Quán',
-			11.977254,
-			108.448239,
-			1
-		    ],
-		    [
-			'Đồi Mộng Mơ',
-			11.977988,
-			108.445610,
-			1.5
-		    ]
-		]
-	    ]
-	];
-    }
+	public static function getAllAgendas()
+	{
+		return [
+			[
+				'name' => 'Dâu chân đầu tiên',
+				'data' => [
+						[
+						'name' => 'Xã Lát',
+						'lat' => 12.113155,
+						'lng' => 108.411023,
+						'hour' => 1
+					],
+						[
+						'name' => 'Langbiang',
+						'lat' => 12.095916,
+						'lng' => 108.413252,
+						'hour' => 2
+					],
+						[
+						'name' => 'Ma rừng lữ quán',
+						'lat' => 12.011218,
+						'lng' => 108.347851,
+						'hour' => 1
+					],
+						[
+						'name' => 'Làng cù lần',
+						'lat' => 12.028467,
+						'lng' => 108.367633,
+						'hour' => 2
+					]
+				]
+			],
+			[
+				'name' => 'Ngoại ô Đà Lạt',
+				'data' => [
+						[
+						'name' => 'Thác Voi',
+						'lat' => 11.823414,
+						'lng' => 108.335087,
+						'hour' => 1
+					],
+						[
+						'name' => 'Chùa Linh Ấn Tự',
+						'lat' => 11.824717,
+						'lng' => 108.334160,
+						'hour' => 2
+					],
+						[
+						'name' => 'Trại nuôi dế',
+						'lat' => 11.882753,
+						'lng' => 108.335689,
+						'hour' => 1
+					],
+						[
+						'name' => 'Dệt lụa tơ tằm',
+						'lat' => 11.824341,
+						'lng' => 108.339325,
+						'hour' => 2
+					]
+				]
+			]
+		];
+	}
 
 }
