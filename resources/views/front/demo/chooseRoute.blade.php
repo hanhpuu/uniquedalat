@@ -55,7 +55,7 @@ use App\Http\Constant\Common as CommonConst;
 			    <div class="tab-pane active" id="portlet_tab_{{$i}}">
 				<div>
 				    <ul><b>Tổng quãng đường dự kiến:</b> 89.0 km</ul>
-				    <ul><b>Tổng thời gian dự kiến:</b> 4 giờ 8 phút </ul>
+				    <ul><b>Tổng thời gian dự kiến:</b> 10 giờ  </ul>
 				</div>
 				@else
 
@@ -64,12 +64,12 @@ use App\Http\Constant\Common as CommonConst;
 				    @if($i==1)
 				    <div>
 					<ul><b>Tổng quãng đường dự kiến:</b> 55.5 km</ul>
-					<ul><b>Tổng thời gian dự kiến:</b> 1 giờ 43 phút </ul>
+					<ul><b>Tổng thời gian dự kiến:</b> 8 giờ </ul>
 				    </div>
 				    @elseif($i==2)
 				    <div>
 					<ul><b>Tổng quãng đường dự kiến:</b> 58.1 km </ul>
-					<ul><b>Tổng thời gian dự kiến:</b> 1 giờ 55 phút </ul>
+					<ul><b>Tổng thời gian dự kiến:</b> 7 giờ </ul>
 				    </div>
 				    @endif	   
 	 <!--<div> <input type='checkbox' name='Agenda[{{$agenda['name']}}]' class='agenda'> </div>-->

@@ -57,7 +57,7 @@ class Agenda extends Model {
 			'name' => 'Mê Linh Garden Coffee',
 			'lat' => 11.899012,
 			'lng' => 108.352832,
-			'hour' => 1
+			'hour' => 2
 		    ],
 		    [
 			'name' => 'Khu Du Lịch Thác Voi',
@@ -77,10 +77,10 @@ class Agenda extends Model {
 			'hour' => 0.5
 		    ],
 		    [
-			'name' => 'Nhà máy trà Atiso',
+			'name' => 'Nhà máy trà và vườn Atiso',
 			'lat' => 11.955955,
 			'lng' => 108.477057,
-			'hour' => 1
+			'hour' => 1.5
 		    ],
 		    [
 			'name' => 'Cánh đồng hoa Cẩm tú cầu',
