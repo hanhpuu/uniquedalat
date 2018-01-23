@@ -81,8 +81,8 @@ use App\Http\Constant\Common as CommonConst;
     var lat = {{$location['lat']}};
     var lng = {{$location['lng']}};
     </script>
-    <script type="text/javascript" src="/js/demo/chooseRoute.js"></script>
-
+    <script type="text/javascript" src="/js/demo/gmap.js"></script>
+	<script type="text/javascript" src="/js/demo/chooseRoute.js"></script>
     @endsection
 
     @section('css')

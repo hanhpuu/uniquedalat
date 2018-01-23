@@ -3,10 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/quickstart/app/Http/Controllers/DemoController.php</file>
-            <file>file:/C:/xampp/htdocs/quickstart/storage/framework/views/75eccdf54deaa8bfa689a17989a78b4e28182b59.php</file>
-            <file>file:/C:/xampp/htdocs/quickstart/app/Http/Models/Agenda.php</file>
-            <file>file:/C:/xampp/htdocs/quickstart/resources/views/front/demo/test.blade.php</file>
+            <file>file:/D:/Code/Laravel/dalat/app/Http/Controllers/DemoController.php</file>
+            <file>file:/D:/Code/Laravel/dalat/public/js/demo/chooseRoute.js</file>
+            <file>file:/D:/Code/Laravel/dalat/public/js/demo/test.js</file>
+            <file>file:/D:/Code/Laravel/dalat/resources/views/front/demo/chooseRoute.blade.php</file>
+            <file>file:/D:/Code/Laravel/dalat/public/test.html</file>
+            <file>file:/D:/Code/Laravel/dalat/app/Http/Models/Agenda.php</file>
+            <file>file:/D:/Code/Laravel/dalat/public/test1.html</file>
         </group>
     </open-files>
 </project-private>
