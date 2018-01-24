@@ -78,8 +78,8 @@ class DemoController extends Controller
 			
 			// update session that contain period planed
 			$datePartsPlaned = Session::get('date_parts_planned');
-			$datePartsPlaned[] = $datePart;
-			Session::put('date_parts_planned', $datePartsPlaned);
+			$datePartsPlaned[$datePart] = $request->input('routes');
+			Session::put('date_parts_planned', $datePartsPlaned);		
 		}
 		
 		$agendas = Agenda::getAllAgendas();
@@ -117,6 +117,11 @@ class DemoController extends Controller
 	
 	public function result()
 	{
+		$datePartsPlaned = Session::get('date_parts_planned');
+		echo '<pre>';
+		print_r($datePartsPlaned);
+		echo '</pre>';
+		die;
 		return view('front.demo.result'); 
 	}
 }
