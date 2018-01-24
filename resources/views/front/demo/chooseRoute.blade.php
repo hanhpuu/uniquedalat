@@ -57,63 +57,92 @@ use App\Http\Constant\Common as CommonConst;
 							@endforeach
 						</ul>
 
-
 					</div>
 					<div class="portlet-body">
 						<div class="tab-content">
 							@foreach($agendas as $i => $agenda)    
 							@if(!$i)
 							<div class="tab-pane active" id="portlet_tab_{{$i}}">
-								@else
-								<div class="tab-pane" id="portlet_tab_{{$i}}">
-									@endif
-										<!--<div> <input type='checkbox' name='Agenda[{{$agenda['name']}}]' class='agenda'> </div>-->
-
-									<div id="map_{{$i}}" class="map"></div>	
+								<div>
+									<ul><b>Tổng quãng đường dự kiến:</b> 89.0 km</ul>
+									<ul><b>Tổng thời gian dự kiến:</b> 10 giờ  </ul>
 								</div>
-								@endforeach
+							@else
+							<div class="tab-pane" id="portlet_tab_{{$i}}">
+							@endif
+							
+							@if($i==1)
+								<div>
+									<ul><b>Tổng quãng đường dự kiến:</b> 55.5 km</ul>
+									<ul><b>Tổng thời gian dự kiến:</b> 8 giờ </ul>
+								</div>
+							@elseif($i==2)
+								<div>
+									<ul><b>Tổng quãng đường dự kiến:</b> 58.1 km </ul>
+									<ul><b>Tổng thời gian dự kiến:</b> 7 giờ </ul>
+								</div>
+							@endif	   
+					 <!--<div> <input type='checkbox' name='Agenda[{{$agenda['name']}}]' class='agenda'> </div>-->
+
 							</div>
-							<div class="col-lg-10 col-md-offset-2 padding-left-0 padding-top-20">
+							@endforeach
+							<div class="portlet-body">
+								<div class="tab-content">
+									@foreach($agendas as $i => $agenda)    
+									@if(!$i)
+									<div class="tab-pane active" id="portlet_tab_{{$i}}">
+										@else
+										<div class="tab-pane" id="portlet_tab_{{$i}}">
+											@endif
+												<!--<div> <input type='checkbox' name='Agenda[{{$agenda['name']}}]' class='agenda'> </div>-->
+
+											<div id="map_{{$i}}" class="map"></div>	
+										</div>
+										@endforeach
+									</div>
+									<div class="col-lg-10 col-md-offset-2 padding-left-0 padding-top-20">
+									</div>
+								</div>
+							</div>					
 							</div>
 						</div>
+						<form method="POST">
+								<input type='hidden' name='_token' value="{{csrf_token()}}">
+								<input type="hidden" name="date_part" value="{{$current_date. ' '. $current_period}}">
+								<input type='hidden' name='routes' id='routes'>
+								<button type="submit" class="btn btn-primary">Chọn lịch trình</button>
+						</form>
 					</div>
-					<form method="POST">
-						<input type='hidden' name='_token' value="{{csrf_token()}}">
-						<input type="hidden" name="date_part" value="{{$current_date. ' '. $current_period}}">
-						<input type='hidden' name='routes' id='routes'>
-						<button type="submit" class="btn btn-primary">Chọn lịch trình</button>
-					</form>
+					<!-- END CONTENT -->
 				</div>
-				
 			</div>
 		</div>
-		<!-- END CONTENT -->
-    </div>
-    <!-- END SIDEBAR & CONTENT -->
-    @endsection
+	</div>
+</div>
+				<!-- END SIDEBAR & CONTENT -->
+@endsection
 
-    @section('js')
-    <!--<script src="https://maps.googleapis.com/maps/api/js"></script>-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEqDMXEY3pAjm_G5utfzA2ukLvJk-1I7Q"></script>
-    <script>
-var locations = '';
-var myJSON = JSON.parse('{!! $agenda_json !!}');
-var lat = {{$location['lat']}};
-var lng = {{$location['lng']}};
-$(document).ready(function(){
-$("form").submit(function(){
-var index = $('.ul-map').find('.active').find('a').attr('data-index');
-var data = myJSON[index]['data'];
-var stringData = JSON.stringify(data);
-document.getElementById("routes").value = stringData;
-});
-});
-    </script>
-    <script type="text/javascript" src="/js/demo/gmap.js"></script>
+@section('js')
+	<!--<script src="https://maps.googleapis.com/maps/api/js"></script>-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEqDMXEY3pAjm_G5utfzA2ukLvJk-1I7Q"></script>
+	<script>
+		var locations = '';
+		var myJSON = JSON.parse('{!! $agenda_json !!}');
+		var lat = {{$location['lat']}};
+		var lng = {{$location['lng']}};
+		$(document).ready(function(){
+			$("form").submit(function(){
+				var index = $('.ul-map').find('.active').find('a').attr('data-index');
+				var data = myJSON[index]['data'];
+				var stringData = JSON.stringify(data);
+				document.getElementById("routes").value = stringData;
+			});
+		});
+	</script>
+	<script type="text/javascript" src="/js/demo/gmap.js"></script>
 	<script type="text/javascript" src="/js/demo/chooseRoute.js"></script>
-    @endsection
+@endsection
 
-    @section('css')
-    <link rel="stylesheet" href="/css/searchMap.css" />
-
-    @endsection
+@section('css')
+	<link rel="stylesheet" href="/css/searchMap.css" />
+@endsection
