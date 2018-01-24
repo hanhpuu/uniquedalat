@@ -118,10 +118,6 @@ class DemoController extends Controller
 	public function result()
 	{
 		$datePartsPlaned = Session::get('date_parts_planned');
-		echo '<pre>';
-		print_r($datePartsPlaned);
-		echo '</pre>';
-		die;
-		return view('front.demo.result'); 
+		return view('front.demo.result', ['datePartsPlaned' => $datePartsPlaned]); 
 	}
 }
