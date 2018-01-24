@@ -34,4 +34,8 @@ Route::group(['middleware' => ['web']], function () {
 	Route::match(['get', 'post'], 'chon-lich-trinh', [
 		'as' => 'date_parts_join', 'uses' => 'DemoController@chooseRoute'
 	]);
+	
+	Route::get('ket-qua', [
+		'as' => 'result', 'uses' => 'DemoController@result'
+	]);
 });

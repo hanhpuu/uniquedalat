@@ -68,17 +68,39 @@ class DemoController extends Controller
 	public function chooseRoute(Request $request)
 	{
 		$dateParts = Session::get('date_parts_join');
-		if($request->isMethod('POST')) {
-		    echo '<pre>';
-		    print_r($request->input('finalData'));
-		    echo '</pre>';
-		    die;
+		if($request->isMethod('POST')) {	    
+			// update session that contain period need to be worked on
+			$datePart = $request->input('date_part');
+			$datePartIndex = array_search($datePart, $dateParts);
+			unset($dateParts[$datePartIndex]);
+			$dateParts = array_values($dateParts);
 			Session::put('date_parts_join', $dateParts);
-			$datePart = array_shift($dateParts);
+			
+			// update session that contain period planed
+			$datePartsPlaned = Session::get('date_parts_planned');
+			$datePartsPlaned[] = $datePart;
+			Session::put('date_parts_planned', $datePartsPlaned);
 		}
+		
 		$agendas = Agenda::getAllAgendas();
 		$location = $request->session()->get('location');
-		return view('front.demo.chooseRoute', ['agendas' => $agendas, 'agenda_json' => json_encode($agendas), 'location' => $location]);
+		
+		if(count($dateParts)) {
+			
+			$currentDateParts = explode(' ', $dateParts[0]);
+			$currentDate = $currentDateParts[0];
+			$currentPeriod = $currentDateParts[1];
+		} else {
+			return redirect()->route('result');
+		}
+		
+		return view('front.demo.chooseRoute', [
+					'agendas' => $agendas, 
+					'agenda_json' => json_encode($agendas), 
+					'location' => $location,
+					'current_date' => $currentDate,
+					'current_period' => $currentPeriod
+		]);
 		
 	}
 	
@@ -86,11 +108,15 @@ class DemoController extends Controller
 	{
 	    
 	    $lat = $request->input('lat');
-			$lng = $request->input('lng');
-			$location = array('lat' => $lat, 'lng' => $lng);
-			Session::put('location', $location);
-			
-			return redirect()->route('dayPart');
-	}
+		$lng = $request->input('lng');
+		$location = array('lat' => $lat, 'lng' => $lng);
+		Session::put('location', $location);
 
+		return redirect()->route('dayPart');
+	}
+	
+	public function result()
+	{
+		return view('front.demo.result'); 
+	}
 }
