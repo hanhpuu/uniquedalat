@@ -29,7 +29,7 @@ use App\Http\Constant\Common as CommonConst;
 						<div class="checkbox-list">
 							@foreach ($dateParts as $date => $datePart)
 							<label><input type="checkbox" name="{{$date. ' '. CommonConst::MORNING}}" value="{{$date. ' '. CommonConst::MORNING}}"> Buổi sáng ngày {{ $date }} </label>
-							<label><input type="checkbox" name="{{$date. ' '. CommonConst::AFTERNOON}}" value="{{$date. ' '. CommonConst::AFTERNOON}}"> Buổi trưa ngày {{ $date }}</label>
+							<label><input type="checkbox" name="{{$date. ' '. CommonConst::AFTERNOON}}" value="{{$date. ' '. CommonConst::AFTERNOON}}"> Buổi chiều ngày {{ $date }}</label>
 							<label><input type="checkbox" name="{{$date. ' '. CommonConst::EVENING}}" value="{{$date. ' '. CommonConst::EVENING}}"> Buổi tối ngày {{ $date }} </label>
 							@endforeach
 						</div>

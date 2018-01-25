@@ -9,7 +9,7 @@ $(document).ready(function () {
   function initializeMap() {
     
     for(var agenda of myJSON) {
-      agenda.data.unshift({name: 'Your hotel',lat:lat, lng: lng,hour:0});
+      agenda.data.unshift({name: 'Điểm xuất phát',lat:lat, lng: lng,hour:0});
     }
     var elementId = 'map_' + 0;
     initialize(elementId, myJSON[0].data);
