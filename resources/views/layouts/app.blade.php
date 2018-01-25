@@ -93,7 +93,7 @@ License: You must have a valid license purchased only from themeforest (the abov
                 <div class="col-md-6 col-sm-6 additional-shop-info">
                     <ul class="list-unstyled list-inline">
                         <li><i class="fa fa-phone"></i><span>+1 456 6717</span></li>
-                        <li><i class="fa fa-envelope-o"></i><span>info@keenthemes.com</span></li>
+                        <li><i class="fa fa-envelope-o"></i><span>uniquedalat@gmail.com</span></li>
                     </ul>
                 </div>
                 <!-- END TOP BAR LEFT PART -->
@@ -200,7 +200,7 @@ License: You must have a valid license purchased only from themeforest (the abov
             <address class="margin-bottom-40">
               Địa chỉ: 61 Đào Duy Từ, thành phố Đà Lạt<br>
               Phone: 300 323 3456<br>
-              Email: <a href="mailto:hoang_phi_carol2000@yahoo.com">hoang_phi_carol2000@yahoo.com</a><br>
+              Email: <a href="mailto:uniquedalat@gmail.com">uniquedalat@gmail.com</a><br>
   
             </address>
 
