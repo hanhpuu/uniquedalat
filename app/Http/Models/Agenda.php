@@ -95,6 +95,62 @@ class Agenda extends Model {
 			'hour' => 2
 		    ]
 		]
+	    ],
+	     [
+		'name' => 'Đà Lạt thân quen',
+		'data' => [
+		    [
+			'name' => 'Rừng hoa Đà Lạt',
+			'lat' => 11.981770,
+			'lng' => 108.452884,
+			'hour' => 1
+		    ],
+		    [
+			'name' => 'Thung lũng tình yêu',
+			'lat' => 11.980175, 
+			'lng' => 108.447305,
+			'hour' => 3
+		    ],
+		    [
+			'name' => 'XQ Sử quán',
+			'lat' => 11.977602,  
+			'lng' => 108.448455,
+			'hour' => 1
+		    ],
+		    [
+			'name' => 'Đồi Mộng Mơ',
+			'lat' => 11.977656, 
+			'lng' => 108.444987,
+			'hour' => 2
+		    ],
+		    [
+			'name' => 'Đại Học Đà Lạt và Vườn rau hữu cơ',
+			'lat' => 11.954886,   
+			'lng' => 108.445074,
+			'hour' => 1
+		    ],
+		    [
+			'name' => 'Nem nướng bà Hùng',
+			'lat' => 11.951207,    
+			'lng' => 108.437050,
+			'hour' => 0.5
+		    ],
+
+		    [
+			'name' => 'Chè và kem Nari',
+			'lat' => 11.947577,    
+			'lng' => 108.437429,
+			'hour' => 0.5
+		    ],
+		    [
+			'name' => 'Windmills Coffee',
+			'lat' => 11.945272,    
+			'lng' => 108.435175,
+			'hour' => 0.5
+		    ]
+		    
+		    
+		]
 	    ]
 	];
     }

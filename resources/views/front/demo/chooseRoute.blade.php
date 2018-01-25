@@ -70,6 +70,11 @@ use App\Http\Constant\Common as CommonConst;
 										<ul><b>Tổng quãng đường dự kiến:</b> 58.1 km </ul>
 										<ul><b>Tổng thời gian dự kiến:</b> 7 giờ </ul>
 									</div>
+								@elseif($i==3)
+									<div>
+										<ul><b>Tổng quãng đường dự kiến:</b> 17 km </ul>
+										<ul><b>Tổng thời gian dự kiến:</b> 9 giờ </ul>
+									</div>
 								@endif
 								<div id="map_{{$i}}" class="map"></div>
 							</div>

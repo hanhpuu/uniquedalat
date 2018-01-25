@@ -60,6 +60,11 @@ License: You must have a valid license purchased only from themeforest (the abov
   <link href="/theme/assets/frontend/layout/css/custom.css" rel="stylesheet">
   <!-- Theme styles END -->
   <link rel="stylesheet" type="text/css" href="/theme/assets/global/plugins/bootstrap-datepicker/css/datepicker3.css"/>
+  <style>.img {
+  max-height: 800px;
+  max-width: 800px;
+  }
+      </style>
   @section('css')
   @show
 </head>
