@@ -14,13 +14,14 @@ $(document).ready(function () {
     var elementId = 'map_' + 0;
     initialize(elementId, myJSON[0].data);
   }
+  
   function initialize(elementId, data) {
     var map = new window.google.maps.Map(document.getElementById(elementId));
-
+    console.log(elementId);
+    console.log(data);
     // new up complex objects before passing them around
     var directionsDisplay = new window.google.maps.DirectionsRenderer({suppressMarkers: true});
     var directionsService = new window.google.maps.DirectionsService();
-
     Tour_startUp(data);
 
     window.tour.loadMap(map, directionsDisplay);
