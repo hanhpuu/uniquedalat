@@ -20,7 +20,7 @@ License: You must have a valid license purchased only from themeforest (the abov
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-  <title>Đăng nhập</title>
+  <title>Unique Đà Lạt</title>
 
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -112,7 +112,7 @@ License: You must have a valid license purchased only from themeforest (the abov
     <!-- BEGIN HEADER -->
     <div class="header">
       <div class="container">
-        <a class="site-logo" href="index.html"><img src="/theme/assets/frontend/layout/img/logos/logo-corp-red.png" alt="Metronic FrontEnd"></a>
+	  <a class="site-logo" href="index.html"><img src='https://scontent.fdad3-1.fna.fbcdn.net/v/t34.0-12/26943610_2017538215178214_1515444515_n.png?oh=9999d5b8a36ec0c0277f34db0b7516d4&oe=5A6B4A52' alt="Unique Đà Lạt" style="max-height:100px; max-width: 100px; position: static; "></a>
 
         <a href="javascript:void(0);" class="mobi-toggler"><i class="fa fa-bars"></i></a>
 
@@ -130,27 +130,27 @@ License: You must have a valid license purchased only from themeforest (the abov
             Thông tin giới thiệu     
               </a>  
               <ul class="dropdown-menu">
-                <li><a href="page-about.html">Lịch sử thành phố</a></li>
-                <li><a href="page-services.html">Địa lý</a></li>
-                <li><a href="page-prices.html">Các sự kiện nổi bật</a></li> 
-		<li><a href="page-prices.html">Các địa điểm tham quan</a></li> 
+                <li><a href="/">Lịch sử thành phố</a></li>
+                <li><a href="/">Địa lý</a></li>
+                <li><a href="/">Các sự kiện nổi bật</a></li> 
+		<li><a href="/">Các địa điểm tham quan</a></li> 
               </ul>
             </li>
-            <li><a href="shop-index.html" target="_blank">Địa điểm lưu trú</a></li>
+            <li><a href="/" target="_blank">Địa điểm lưu trú</a></li>
 	    <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#">
+              <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" "/">
             Ẩm thực phố phường     
               </a>  
               <ul class="dropdown-menu">
-                <li><a href="page-about.html">Nhà hàng/ Quán ăn</a></li>
-                <li><a href="page-services.html"> Cà phê </a></li>
+                <li><a href="/">Nhà hàng/ Quán ăn</a></li>
+                <li><a href="/"> Cà phê </a></li>
               </ul>
             </li>
-            <li><a href="onepage-index.html" target="_blank"></a></li>
-	    <li><a href="onepage-index.html" target="_blank">Blog du lịch</a></li>
-	    <li><a href="onepage-index.html" target="_blank">Lịch trình cho bạn</a></li>
+            <li><a href="/" target="_blank"></a></li>
+	    <li><a href="/" target="_blank">Blog du lịch</a></li>
+	    <li><a href="/" target="_blank">Lịch trình cho bạn</a></li>
 	    
-            <li><a href="http://keenthemes.com/preview/metronic/theme/templates/admin" target="_blank">Liên hệ</a></li>
+            <li><a href="/" target="_blank">Liên hệ</a></li>
 
             <!-- BEGIN TOP SEARCH -->
             <li class="menu-search">
