@@ -23,8 +23,10 @@
 			    </div>
 			</div>
 			<div class="form-group">
-			    <div class="col-lg-10 col-lg-offset-2 padding-left-0">
-				<div id="map" style="height:500px;width: 100%;"></div>
+			    <label for="password" class="col-lg-2 control-label">Chọn điểm khởi hành <span class="require">*</span></label>
+				<div class="col-lg-10">
+					<div id="map" style="height:500px;width: 100%;"></div>
+				</div>
 			    </div>
 
 			</div>
