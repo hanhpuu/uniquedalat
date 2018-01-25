@@ -107,19 +107,21 @@ function Tour_startUp(stops) {
                   directionsDisplay.setDirections(combinedResults);
                   var legs = combinedResults.routes[0].legs;
                   // alert(legs.length);
-                  
                   for (var i = 0; i < legs.length; i++) {
                     var markerletter = "A".charCodeAt(0);
                     markerletter += i;
                     markerletter = String.fromCharCode(markerletter);
-                    var stopIndex = i*kk + i;
-                    createMarker(directionsDisplay.getMap(), legs[i].start_location, stops[stopIndex].name,'', markerletter);
+                    var stopIndex = i*kk + i;               
+                    var  html = stops[stopIndex].link ? '<a href="' +stops[stopIndex].link + '" target="_blank">Chi tiết</a>' : '';
+                    createMarker(directionsDisplay.getMap(), legs[i].start_location, stops[stopIndex].name,html, markerletter);
                   }
                   var i = legs.length;
                   var markerletter = "A".charCodeAt(0);
                   markerletter += i;
                   markerletter = String.fromCharCode(markerletter);
-                  createMarker(directionsDisplay.getMap(), legs[legs.length - 1].end_location, stops[i*kk + i].name,'', markerletter);
+                  var stopIndex = i*kk + i;
+                  var  html = stops[stopIndex].link ? '<a href="' +stops[stopIndex].link + '" target="_blank">Chi tiết</a>' : '';
+                  createMarker(directionsDisplay.getMap(), legs[legs.length - 1].end_location, stops[stopIndex].name,html, markerletter);
                 }
               }
             });
