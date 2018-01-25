@@ -48,6 +48,7 @@ class DemoController extends Controller
 	public function dayPart(Request $request)
 	{
 		if ($request->isMethod('POST')) {
+		    Session::forget('date_parts_planned');
 			$array = $request->all();
 			$dateParts = [];
 			foreach ($array as $key => $value) {
