@@ -2,13 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/xampp/htdocs/quickstart/public/js/demo/demo.js</file>
-            <file>file:/C:/xampp/htdocs/quickstart/resources/views/front/demo/result.blade.php</file>
-            <file>file:/C:/xampp/htdocs/quickstart/resources/views/front/demo/dayParts.blade.php</file>
-            <file>file:/C:/xampp/htdocs/quickstart/resources/views/front/demo/chooseRoute.blade.php</file>
-            <file>file:/C:/xampp/htdocs/quickstart/app/Http/Models/Agenda.php</file>
-            <file>file:/C:/xampp/htdocs/quickstart/public/js/demo/chooseRoute.js</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

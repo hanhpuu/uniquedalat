@@ -121,4 +121,10 @@ class DemoController extends Controller
 		$datePartsPlaned = Session::get('date_parts_planned');
 		return view('front.demo.result', ['datePartsPlaned' => $datePartsPlaned]); 
 	}
+	
+	public function review($route, $road)
+	{
+	    $bladeName = 'road_' . $route . '_' . $road;
+	    return view('front.demo.road.' . $bladeName);  
+	}
 }

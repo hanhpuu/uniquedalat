@@ -38,4 +38,8 @@ Route::group(['middleware' => ['web']], function () {
 	Route::get('ket-qua', [
 		'as' => 'result', 'uses' => 'DemoController@result'
 	]);
+	
+	Route::get('chi-tiet/{route}/{road}', [
+	    'as' => 'review', 'uses' => 'DemoController@review'
+	]);
 });
