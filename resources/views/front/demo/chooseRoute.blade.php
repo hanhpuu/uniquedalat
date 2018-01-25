@@ -19,7 +19,7 @@ use App\Http\Constant\Common as CommonConst;
 				if ($current_period == CommonConst::MORNING) {
 					$current_period_text = 'buổi sáng';
 				} else if ($current_period == CommonConst::AFTERNOON) {
-					$current_period_text = 'buổi trưa';
+					$current_period_text = 'buổi chiều';
 				} else {
 					$current_period_text = 'buổi tối';
 				}

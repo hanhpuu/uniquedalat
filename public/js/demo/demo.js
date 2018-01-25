@@ -1,11 +1,11 @@
 $.fn.datepicker.dates['vn'] = {
-  days: ["Chủ nhật", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-  daysShort: ["Chủ nhật", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-  daysMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
-  months: ["Tháng 1", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-  monthsShort: ["Tháng 1", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-  today: "Today",
-  clear: "Clear",
+  days: ["Chủ nhật", "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy"],
+  daysShort: ["Chủ nhật", "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy"],
+  daysMin: ["CN", "T2", "T3", "T4", "T5", "T6", "T7"],
+  months: ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"],
+  monthsShort: ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"],
+  today: "Hôm nay",
+  clear: "Xóa",
   format: "mm/dd/yyyy",
   titleFormat: "MM yyyy", /* Leverages same syntax as 'format' */
   weekStart: 0
