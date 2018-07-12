@@ -42,4 +42,27 @@ Route::group(['middleware' => ['web']], function () {
 	Route::get('chi-tiet/{route}/{road}', [
 	    'as' => 'review', 'uses' => 'DemoController@review'
 	]);
+	
+	/*
+	 * Required routes for data migration
+	 */
+	// step 1
+	Route::get('/export/shopify/font', 'ShopifyProductController@exportShopifyFont');
+	// step 2
+	Route::any('/import/shopify/change-imported-data', 'ShopifyProductController@changeImportedData');
+	Route::get('/import/shopify/test', 'ShopifyProductController@test');
+	// step 3
+	Route::any('/import/shopify/save-order-data', 'ShopifyOrderController@saveOrderData');
+	// step 4
+	Route::any('/import/shopify/import-order-data', 'ShopifyOrderController@importOrderData');
+    
+	
+	/*
+	 * List of optional routes
+	 */
+    // set stock number of all products to 50
+    Route::get('stock','StockController@setMassStock');
+    // add all text color option to all monogramming product
+    Route::get('color','StockController@addColorOption');
+        
 });
